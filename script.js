@@ -1,6 +1,8 @@
 
 //🍈 let, const
 
+const url_key = "15a7652718e5b6e803f265472ea2cad2";
+
 const weather = {};
 
 weather.temperature = {
@@ -16,8 +18,14 @@ const notificationElement = document.querySelector(".notification");
 
 
 // 🍈 API
+function getWeather(){
 
-const url_key = "15a7652718e5b6e803f265472ea2cad2";
+    fetch(url_key)
+  .then(response => response.json())
+  .then(data => console.log(data));
+    
+}
+
 
 
 //  C 58 . JS 58
